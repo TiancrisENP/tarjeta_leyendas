@@ -1,0 +1,195 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+    
+
+}
+
+/* Header y Navegación */
+header {
+    background-color: #000080; /* Azul oscuro del escudo del Real Madrid */
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+}
+
+.navbar {
+    display: flex;
+    list-style: none;
+}
+
+.navbar li {
+    margin-left: 1.5rem;
+}
+
+.navbar a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #ffd700; /* Dorado para hover */
+}
+
+/* Sección Hero */
+.hero {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: #FFFFFF; /* Blanco del Real Madrid */
+    border-bottom: 4px solid #000080; /* Borde azul */
+    margin-bottom: 2rem;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #000080;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Contenedor de tarjetas */
+.contenedor-tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+/* Estilo para tarjetas */
+.tarjeta {
+    width: calc(20% - 20px); /* 5 tarjetas por fila con espacio entre ellas */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: white;
+    transition: transform 0.2s ease-in-out;
+    border: 1px solid #e0e0e0;
+}
+
+.tarjeta:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.imagen-tarjeta {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.cuerpo-tarjeta {
+    padding: 20px;
+    text-align: center;
+}
+
+.titulo-tarjeta {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #000080; /* Azul del Real Madrid */
+}
+
+.card-text {
+    color: #555;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    height: 80px; /* Altura fija para texto */
+    overflow: hidden;
+}
+
+.boton-tarjeta {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000080; /* Azul del Real Madrid */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.boton-tarjeta:hover {
+    background-color: #00006b; /* Azul más oscuro para hover */
+}
+
+/* Footer */
+footer {
+    color: white;
+    text-align: center;
+    background-color: #000080; /* Azul del Real Madrid */
+    padding: 30px;
+    margin-top: 20px;
+}
+
+footer h2 {
+    margin-bottom: 15px;
+    color: #ffd700; /* Dorado para títulos en footer */
+}
+
+footer p {
+    margin: 8px 0;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 1200px) {
+    .tarjeta {
+        width: calc(25% - 20px); /* 4 tarjetas por fila */
+    }
+}
+
+@media (max-width: 992px) {
+    .tarjeta {
+        width: calc(33.33% - 20px); /* 3 tarjetas por fila */
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+    
+    .navbar {
+        margin-top: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .navbar li {
+        margin: 0.5rem;
+    }
+    
+    .tarjeta {
+        width: calc(50% - 20px); /* 2 tarjetas por fila */
+    }
+    
+    .card-text {
+        height: auto; /* Altura automática para móviles */
+    }
+}
+
+@media (max-width: 576px) {
+    .tarjeta {
+        width: 100%; /* 1 tarjeta por fila (móviles) */
+    }
+}
